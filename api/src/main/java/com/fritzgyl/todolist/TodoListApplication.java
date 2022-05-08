@@ -13,9 +13,5 @@ public class TodoListApplication {
         SpringApplication.run(TodoListApplication.class, args);
     }
 
-    @PostConstruct
-    void init() {
-        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-    }
 
 }

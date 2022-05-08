@@ -1,5 +1,6 @@
 package com.fritzgyl.todolist.model;
 
+import com.fritzgyl.todolist.model.audit.DateAudit;
 import lombok.*;
 
 import javax.persistence.*;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "to_do")
-public class ToDo {
+public class ToDo extends DateAudit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
