@@ -9,7 +9,7 @@ public interface ToDoService {
 
     ToDoResponse saveToDo(ToDoRequest toDoRequest);
 
-    PagedResponse<ToDoResponse> getTodos(int page, int size);
+    PagedResponse<ToDoResponse> getToDos(int page, int size);
 
     ToDoResponse getToDo(Long toDoId);
 

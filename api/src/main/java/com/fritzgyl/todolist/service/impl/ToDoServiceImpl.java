@@ -34,7 +34,7 @@ public class ToDoServiceImpl implements ToDoService {
     }
 
     @Override
-    public PagedResponse<ToDoResponse> getTodos(int page, int size) {
+    public PagedResponse<ToDoResponse> getToDos(int page, int size) {
         Pageable pageable = PageRequest.of(page, size, Sort.Direction.DESC, CREATED_AT);
 
         Page<ToDo> toDos = toDoRepository.findAll(pageable);
