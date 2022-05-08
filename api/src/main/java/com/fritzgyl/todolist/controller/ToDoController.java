@@ -35,12 +35,12 @@ public class ToDoController {
         return new ResponseEntity<>(toDoService.getToDo(toDoId), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<ToDoResponse> updateToDo(@PathVariable(value = "id") Long toDoId, @Valid @RequestBody ToDoRequest toDoRequest) {
         return new ResponseEntity<>(toDoService.updateToDo(toDoId, toDoRequest), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void deleteToDo(@PathVariable(value = "id") Long toDoId) {
         toDoService.deleteToDo(toDoId);
